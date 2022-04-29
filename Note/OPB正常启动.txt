@@ -1,0 +1,55 @@
+
+
+Node1Account：
+["0xb7b544f3beb1b22669cc0f4803d5fd5fc62a52fa", "0x4031546668b02d9718dd0edd9f174dc96c81e8de", "0x76baab61f5a5fcfa9b3e96d6b963ca63c67d050e"]
+
+0x76baAb61f5a5fcfA9b3e96d6B963ca63c67d050e  密码：123
+
+Node2Account：
+["0xedc058ce47e105f2b477ae5207aeed4e25ca4cd8", "0x8d71f5d45486b7391c7cc46e110bff622bc5e9cc", "0x4ce860a4fc8b034f049f9c82e0561bf20456b6ba"]
+
+
+启动1：
+geth --networkid 8888 --datadir node1 --syncmode 'full' --nodiscover --maxpeers 0 -verbosity 6 --ipcdisable --port 30311 -unlock '0xB7b544F3bEB1B22669Cc0f4803d5FD5Fc62a52fa' --password node1/password.txt --mine console 2>> node1/node1.log
+
+
+启动2：
+geth --networkid 8888 --datadir node2 --syncmode 'full' --nodiscover --maxpeers 1 -verbosity 6 --ipcdisable --port 30312 --rpc --rpcaddr 0.0.0.0 --rpcport 8547 --rpcapi 'eth,net,web3' --ws --ws.port 8548 --wsaddr 0.0.0.0 --ws.api 'eth,net,web3' --allow-insecure-unlock  console 2>> node2/node2.log
+
+
+代理：
+ npm run start
+ 
+ 
+ 
+ 
+ 
+ 接口测试：
+ 
+ 转账：
+{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{"from":"0xEdC058cE47e105f2b477AE5207AEeD4E25CA4Cd8","to":"0x8d71f5d45486b7391c7cc46e110bff622bc5e9cc","gas":"0xC350","gasPrice":"0x1388","value":"0x5"}],"id":83}
+
+echo '{"jsonrpc":"2.0","method":"eth_sendTransaction","params":[{"from":"0xEdC058cE47e105f2b477AE5207AEeD4E25CA4Cd8","to":"0x8d71f5d45486b7391c7cc46e110bff622bc5e9cc","gas":"0xC350","gasPrice":"0x1388","value":"0x5"}],"id":83}' | tr -d '\n' | curl -H 'content-type: application/json' -d @- http://localhost:8547
+
+
+获取块高：
+{"jsonrpc":"2.0","method":"eth_blockNumber","params":[],"id":83}
+
+{
+    "jsonrpc": "2.0",
+    "id": 83,
+    "result": "0x7dac"
+}
+
+获取账户：
+{"jsonrpc":"2.0","method":"eth_accounts","params":[],"id":1}
+
+{
+    "jsonrpc": "2.0",
+    "id": 1,
+    "result": [
+        "0xedc058ce47e105f2b477ae5207aeed4e25ca4cd8",
+        "0x8d71f5d45486b7391c7cc46e110bff622bc5e9cc",
+        "0x4ce860a4fc8b034f049f9c82e0561bf20456b6ba"
+    ]
+}

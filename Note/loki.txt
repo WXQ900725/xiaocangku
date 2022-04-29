@@ -1,0 +1,423 @@
+577  docker pull grafana/promtail:v1.3.0
+  578  ll
+  579  docker images
+  580  docker rmi b17d3966b002
+  581  ll
+  582  docker images
+  583  cd ..
+  584  cd loki
+  585  ll
+  586  cat docker-compose.yaml 
+  587  docker ps
+  588  docker exec 6ac86bbfd216 ls /etc/loki/local-config.yaml
+  589  docker cp 6ac86bbfd216:/etc/loki/local-config.yaml ./
+  590  ll
+  591  vim local-config.yaml 
+  592  cat local-config.yaml 
+  593  docker ps
+  594  docker cp 4222da07de42:/etc/promtail/docker-config.yaml ./
+  595  ll
+  596  vim docker-config.yaml 
+  597  cat docker-config.yaml 
+  598  ip a
+  599  ll
+  600  vim docker-config.yaml 
+  601  ll
+  602  docker-compose down
+  603  ll
+  604  vim docker-compose.yaml 
+  605  mkdir {loki,promtail}
+  606  ll
+  607  mv local-config.yaml loki/
+  608  mv docker-config.yaml promtail/
+  609  cd promtail/
+  610  ll
+  611  vim docker-config.yaml 
+  612  cd ..
+  613  ll
+  614  cd promtail/
+  615  ll
+  616  cd ..
+  617  ll
+  618  cd loki/
+  619  ll
+  620  vim local-config.yaml 
+  621  ll
+  622  cd ..
+  623  ll
+  624  mkdir grafana
+  625  ll
+  626  docker-compose up -d
+  627  docker ps
+  628  ss -ntl
+  629  netstat -ntlp
+  630  docker ps
+  631  docker logs -f loki
+  632  docker p
+  633  docker ps 
+  634  docker logs -f promtail 
+  635  LL
+  636  ll
+  637  cat docker-compose.yaml 
+  638  cd loki/
+  639  ll
+  640  cat local-config.yaml 
+  641  cd ..
+  642  ll
+  643  cd promtail/
+  644  ll
+  645  cat docker-config.yaml 
+  646  ll
+  647  cd ..
+  648  ll
+  649  cat docker-compose.yaml 
+  650  ll
+  651   cd promtail/
+  652  ll
+  653  cat docker-config.yaml 
+  654  vim docker-config.yaml 
+  655  cd /usr/local/eth
+  656  ll
+  657  cd devnet
+  658  l
+  659  ll
+  660  geth --networkid 9999 --datadir node1 --syncmode 'full' --nodiscover --maxpeers 0 -verbosity 6 --ipcdisable --port 30311 -unlock '0x6d6844b9E972E15a07f640430b12Db3C1D765D12' --password node1/password.txt --mine --allow-insecure-unlock console 2>> node1/node1.log
+  661  cd /usr/local/eth/devnet
+  662  geth --networkid 9999 --datadir node2 --syncmode 'full' --nodiscover --maxpeers 2 -verbosity 6 --ipcdisable --port 30312 --rpc --rpcaddr 0.0.0.0 --rpcport 8547 --rpcapi 'eth,net,web3' --ws --ws.port 8557 --wsaddr 0.0.0.0 --ws.api 'eth,net,web3' --allow-insecure-unlock console 2>> node2/node2.log
+  663  cd /usr/local/eth/devnet
+  664  geth --networkid 9999 --datadir node3 --syncmode 'full' --nodiscover --maxpeers 2 -verbosity 6 --ipcdisable --port 30313 --rpc --rpcaddr 0.0.0.0 --rpcport 8548 --rpcapi 'eth,net,web3' --ws --ws.port 8558 --wsaddr 0.0.0.0 --ws.api 'eth,net,web3' --allow-insecure-unlock console 2>> node3/node3.log
+  665  ll
+  666  cd ..
+  667  ll
+  668  cd ...
+  669  cd ..
+  670  ll
+  671  cd /usr/local/loki
+  672  ll
+  673  cd /var/logs/
+  674  ll
+  675  cd ..
+  676  ll
+  677  cd log
+  678  ll
+  679  cd 
+  680  cd /bs
+  681  ll
+  682  cd /usr/local/
+  683  ll
+  684  cd loki
+  685  ll
+  686  vim docker-compose.yaml
+  687  docker-compose down
+  688  docker-compose up -d
+  689  docker-compose down
+  690  vim docker-compose.yaml
+  691  ll
+  692  cd promtail/
+  693  ll
+  694  vim docker-config.yaml 
+  695  cd ..
+  696  ll
+  697  vim docker-compose.yaml
+  698  docker-compose down
+  699  docker-compose up -d
+  700  docker ps
+  701  cat promtail/docker-config.yaml 
+  702  cd ..
+  703  ll
+  704  cd loki
+  705  ll
+  706  cat docker-compose.yaml
+  707  ll 
+  708  ll grafana/
+  709  cd grafana/csv/
+  710  ll
+  711  cd ..
+  712  ll
+  713  cd ..
+  714  ll
+  715  docker logs -f loki --tail 50
+  716  docker ps
+  717  docker logs -f grafana --tail 50
+  718  docker logs -f loki --tail 50
+  719  cd /usr/local/elk/
+  720  ll
+  721  cd kibana/
+  722  ll
+  723  cd ll
+  724  cd ..
+  725  mkdir loki
+  726   Installing Loki with Docker or Docker Compose
+  727  cd loki/
+  728  ll
+  729  wget https://raw.githubusercontent.com/grafana/loki/v1.5.0/cmd/loki/loki-local-config.yaml -O loki-config.yaml
+  730  docker run -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:1.5.0 -config.file=/mnt/config/loki-config.yaml
+  731  wget https://raw.githubusercontent.com/grafana/loki/v1.5.0/cmd/promtail/promtail-docker-config.yaml -O promtail-config.yaml
+  732  docker run -v $(pwd):/mnt/config -v /var/log:/var/log grafana/promtail:1.5.0 -config.file=/mnt/config/promtail-config.yaml
+  733  install docker
+  734  help
+  735  install docker
+  736  install help
+  737  install -- help
+  738  docker version
+  739   uname -r 
+  740  cd ../..
+  741  cd ..
+  742  ll
+  743  yum -yinstalled |grep docker
+  744  yum -y install docker
+  745  yum -yinstalled |grep docker
+  746  yum -y installed |grep docker
+  747  yum list  installed |grep docker
+  748  systemctl start docker
+  749  systemctl status docker
+  750  cd /usr/local/loki/
+  751  ll
+  752  docker run -v $(pwd):/mnt/config -p 3100:3100 grafana/loki:1.5.0 -config.file=/mnt/config/loki-config.yaml
+  753  docker run -v $(pwd):/mnt/config -v /var/log:/var/log grafana/promtail:1.5.0 -config.file=/mnt/config/promtail-config.yaml
+  754  ll
+  755  vim loki-config.yaml 
+  756  vim promtail-config.yaml 
+  757  docker -s
+  758  docker ps -a 
+  759  docker start d089301b60ea
+  760  docker start 226a94c40244
+  761  docker start fcf3319ddc9d
+  762  docker ps -a 
+  763  docker stop d089301b60ea
+  764  docker stop 226a94c40244
+  765  docker ps -a 
+  766  ll
+  767  vim promtail-config.yaml 
+  768  docker ps -a 
+  769  docker start d089301b60ea
+  770  docker start 226a94c40244
+  771  docker ps -a 
+  772  docker rm -f d089301b60ea
+  773  docker rm -f 226a94c40244
+  774  docker rm -f fcf3319ddc9d
+  775  docker ps -a 
+  776  ll
+  777  rm -f loki-config.yaml 
+  778  rm -f promtail-config.yaml 
+  779  ll
+  780  wget https://raw.githubusercontent.com/grafana/loki/v1.5.0/production/docker-compose.yaml -O docker-compose.yaml
+  781  ll
+  782  cat docker-compose.yaml 
+  783  ll
+  784  vim docker-compose.yaml 
+  785  ll
+  786  docker-compose up -d
+  787  ip a
+  788  telnet 172.23.176.231 9095
+  789  docker ps
+  790  docker-compose down
+  791  vim docker-compose.yaml 
+  792  docker-compose up -d
+  793  docker ps
+  794  ip a
+  795  telnet 172.23.176.231 9095
+  796  ll
+  797  cat docker-compose.yaml 
+  798  docker-compose down
+  799  cp docker-compose.yaml docker-compose.yaml.bak
+  800  ll
+  801  vim docker-compose.yaml
+  802  ll
+  803  cd loki/
+  804  ll
+  805  cd ..
+  806  vim docker-compose.yaml
+  807  docker-compose up -d
+  808  ss -ntl
+  809  docker logs -f loki
+  810  docker-compose down
+  811  ll
+  812  vim docker-compose.yaml
+  813  cd loki/
+  814  pwd
+  815  ll
+  816  cd..
+  817  cd ..
+  818  lll
+  819  ll
+  820  vim docker-compose.yaml
+  821  docker-compose up -d
+  822  docker logs -f loki
+  823  cd  /usr/local/loki/loki
+  824  ll
+  825  docker-compose down
+  826  ll
+  827  cd ,,
+  828  ll
+  829  cd ..
+  830  ll
+  831  rm -f docker-compose.yaml
+  832  cp docker-compose.yaml.bak docker-compose.yaml
+  833  ll
+  834  cd promtail/
+  835  ll
+  836  vim docker-config.yaml 
+  837  cd ..
+  838  ll
+  839  cd ..
+  840  ll
+  841  cd lokiPromtail/
+  842  ll
+  843  cd logs/
+  844  ll
+  845  pwd
+  846  cd ..
+  847  cd loki
+  848  ll
+  849  cd promtail/
+  850  vim docker-config.yaml 
+  851  cd ..
+  852  ll
+  853  docker-compose up -d
+  854  docker logs -f loki
+  855  ll
+  856  cd promtail/
+  857  ll
+  858  cat docker-config.yaml 
+  859  docker logs -f promtail
+  860  ll
+  861  cd ..
+  862  ll
+  863  cd lokiPromtail/logs/
+  864  ll
+  865  rz
+  866  rm -f log.out 
+  867  rz
+  868  cd ..
+  869  loki/promtail/
+  870   
+  871  cd loki/promtail/
+  872  vim docker-config.yaml 
+  873  cd ..
+  874  docker-compose down
+  875  docker-compose up -d
+  876  cd promtail/
+  877  ll
+  878  vim docker-config.yaml 
+  879  docker-compose down
+  880  docker-compose up -d
+  881  ll
+  882  cd ..
+  883  cd lokiPromtail/logs/
+  884  cd ,,
+  885  cd ..
+  886  cd loki
+  887  cd promtail/
+  888  ll
+  889  vim docker-config.yaml 
+  890  docker-compose down
+  891  docker-compose up -d
+  892  vim docker-config.yaml 
+  893  docker-compose down
+  894  docker-compose up -d
+  895  vim docker-config.yaml 
+  896  cd ..
+  897  cd ../../..
+  898  ll
+  899  cd /usr/local/lokiPromtail/logs/
+  900  ll
+  901  l
+  902  ll
+  903  cd ..
+  904  ll
+  905  cd loki
+  906  ll
+  907  vim docker-compose.yaml
+  908  ll
+  909  vim docker-compose.yaml
+  910  docker logs -f loki 
+  911  cd promtail/
+  912  vim docker-config.yaml 
+  913  cd ..
+  914  ll
+  915  vim docker-compose.yaml
+  916  docker-compose down
+  917  docker-compose up -d
+  918  docker ps
+  919  docker s
+  920  docker ps
+  921  docker logs -f promtail --tail 50
+  922  ll /usr/local/lokiPromtail/logs/log.out
+  923  ll  -h /usr/local/lokiPromtail/logs/log.out
+  924  docker logs -f promtail --tail 50
+  925  docker-compose down
+  926  docker-compose up -d
+  927  docker-compose down
+  928  docker -ps
+  929  docker-compose -ps
+  930  history 
+  931  docker ps -a
+  932  ll
+  933  rm -f docker-compose.yaml.bak 
+  934  ll
+  935  cd ..
+  936  docker-compose up -d
+  937  ll
+  938  cd /usr/local/loki
+  939  ll
+  940  cd promtail/
+  941  vim docker-config.yaml 
+  942  cd ..
+  943  docker-compose down
+  944  docker-compose up -d
+  945  docker-compose down
+  946  cd promtail/
+  947  vim docker-config.yaml 
+  948  cd ..
+  949  cd loki/
+  950  ll
+  951  vim local-config.yaml
+  952  ll
+  953  vim local-config.yaml 
+  954  cd ..
+  955  ll
+  956  vat docker-compose.yaml 
+  957  cat docker-compose.yaml 
+  958  docker-compose up -d
+  959  docker-compose down
+  960  cd loki/
+  961  ll
+  962  vim local-config.yaml 
+  963  cd ..
+  964  cd promtail/
+  965  ll
+  966  vim docker-config.yaml 
+  967  cd ..
+  968  ll
+  969  cd grafana/
+  970  ll
+  971  cd ..
+  972  ll
+  973  cd loki/
+  974  vim local-config.yaml 
+  975  ll
+  976  cd ..
+  977  ll
+  978  cat docker-compose.yaml 
+  979  ll
+  980  docker-compose up -d
+  981  ss -ntl
+  982  cd loki/
+  983  cat local-config.yaml 
+  984  docker logs loki 
+  985  tail -f docker logs loki
+  986  docker logs loki 
+  987  ll
+  988  vim local-config.yaml 
+  989  ll
+  990  docker logs -f promtail 
+  991  docker logs -f loki 
+  992  const resultsLine = coll.chain().data();
+  993  console.log(resultsLine)
+  994  const resultsLine = coll.chain().data();
+  995  docker logs -f loki 
+  996  docker logs -f promtail 
+  997  docker logs -f loki 
+  998  docker logs -f promtail 
+  999  docker logs -f loki 

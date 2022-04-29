@@ -1,0 +1,49 @@
+退款：
+{
+  "userid": "789452262",
+  "orderid": "W20210628100652941272822", 
+  "totalFee": 10,
+  "refundFee": 10,
+  "refundDesc": "ces",
+  "refundAccount": "",
+  "backurl": "http://60.247.61.1:55871/GateWay/RefundNotify",
+  "paytype": 1
+}
+
+创建订单：
+{
+  "userid": "admin001254531232223",  
+  "goodsid": "12发3",
+  "goodsname": "测试3",
+  "goodsinf": "BSN服务网络充值",
+  "trxamt": 10,
+  "clientip": "192.168.1.25",
+  "backurl": "http://192.168.6.145:8080/sys/account/transNotify",
+  "paytype": 1
+}
+
+退款单查询：
+{
+  "refundNo": "WR20210628101620312308495",
+  "paytype": 1
+}
+
+
+KhjebT2B8gObTb4Kg1F3XdvKioVz40otMTv8z/t6bYWH0PsXDJX9kswynaZxTVaU/cKudXzeuloSOgWZYNRq79hTMeqE63r4/H2F1BYVbcCB55mEzKbGpTv+hbcgmB8PVJ2U1P2OWlkHmTPxeA1HAi2Ln9+M8Yny5Q6qUzfhvlh/w+vQ/blNVVhrr+2SNnlamLVwc6+q6oeIEQkFOzFd+uH8xlXXABpfcNPBHmWtrip2viuW40EuhxIAkbbbAkqxVTqJbjG2IBwpx0TFVs+w2WaF5ycVc3xDNx1N9sSkY6kfb7s2FJ9uvzjiOxLt4h2T5tbd+eBIFArbnnJYLy88mouJvSiWEyZUmmZdhsVZFN+ODH7HfbwIffJaOY8MuKiihk09gDGPpSPBY9wezHRRcw3txrIs45vxRnTUeeaj+LxSvh4cHFtsz2EiO3SJtcE4nxwvNkIZvYrw2OSMkqPvB/RcFhKthgKrMumDeBgim+N/o8OfES6jjEGIb2zhQL4pT6Lat2KzBrYUEOqIUf4YfGxYdXrG13LsIeW0ETA4jpzuEjkzbjb2afniyuldydRUKha1RqtfGW7465ojVugKVf8Nqseclgzqv00j40Vq4e7I2r/kYjg2hJDtBE1Pd/dlkMjym0gWAot/7mhRm+FeTfofoqiz32501cNlsLRYzUahOIRKvCbrwa9/ul9u7gEmGXHGkJhdKqBYVbArM5GJHB4JcyaOIRpxrlLe2itszMNzncCCNk0jV+58j7YzrUSsS4DYfz8ztpRLF0Rh5sDVw36IVJtAgrxyrw9n4oEzlz7MhuFt1CqCJjhqdo7nVf/cCyQjf8Pk5EX+8nD+ydQ1oApc2nTdomN7Lbc0G2ZHX1P8CxouYTxKp7j96P3LwTGMx0o/u0Pb7lUdVNuoWhSIlnSij+BcSdeSWeQ6HWuYkZNm636+WOl1ViYJZ6XQDldSpzBsy53utClzjQIv3WBfXfZ01ErZHtRI/YA2s9yFp8Ysy3vweVVZR9yE7AbEe7DDY4CicpgusorVNoMLk8Bvu8pfHjax0XoTFafmhSXuJB2gaSeDUp6eY2HCr/O/oLVE
+
+
+<root>
+<out_refund_no><![CDATA[R20210623143108304398196]]></out_refund_no>
+<out_trade_no><![CDATA[W20210623143011714547724]]></out_trade_no>
+<refund_account><![CDATA[REFUND_SOURCE_RECHARGE_FUNDS]]></refund_account>
+<refund_fee><![CDATA[10]]></refund_fee>
+<refund_id><![CDATA[50301008762021062310010252515]]></refund_id>
+<refund_recv_accout><![CDATA[支付用户零钱]]></refund_recv_accout>
+<refund_request_source><![CDATA[API]]></refund_request_source>
+<refund_status><![CDATA[SUCCESS]]></refund_status>
+<settlement_refund_fee><![CDATA[10]]></settlement_refund_fee>
+<settlement_total_fee><![CDATA[10]]></settlement_total_fee>
+<success_time><![CDATA[2021-06-23 14:31:18]]></success_time>
+<total_fee><![CDATA[10]]></total_fee>
+<transaction_id><![CDATA[4200001228202106233764485246]]></transaction_id>
+</root>
