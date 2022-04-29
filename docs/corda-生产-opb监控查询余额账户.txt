@@ -1,0 +1,4 @@
+{"address":"3e37b21c7876481484dd54171d0ec48a_O=OPB-BeijingNode1,L=Beijing,C=CN","mnemonic":"8x#(^lYH3!89@w","publicKey":"--"}
+{"address":"2ce89363dcb142e0abf165493bf31b9a_O=OPB-BeijingNode2,L=Beijing,C=CN","mnemonic":"8x#(^lYH3!89@w","publicKey":"--"}
+{"address":"f070b2b245af4028ad8a6482191ede30_O=OPB-BeijingNode3,L=Beijing,C=CN","mnemonic":"8x#(^lYH3!89@w","publicKey":"--"}
+{"address":"4c38087c469245858a84b7c5a702f312_O=OPB-Admin,L=Beijing,C=CN","mnemonic":"8x#(^lYH3!89@w","publicKey":"--"}

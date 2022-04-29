@@ -1,0 +1,100 @@
+    /*
+      ---721
+     * isApprovedForAll            0xe985e9c5
+     * safeTransferFrom            0xb88d4fde
+     * getApproved                 0x081812fc
+     * initialize                  0x4cd88b76
+     * mint                        0xd0def521
+     * setApprovalForAll           0xa22cb465
+     * supportsInterface           0x01ffc9a7
+     * symbol                      0x95d89b41
+     * approve                     0x095ea7b3
+     * freeze                      0xd7a78db8
+     * ownerOf                     0x6352211e
+     * renounceOwnership           0x715018a6
+     * setAuthorityLogic           0x41044052
+     * unFreeze                    0xd302b0dc
+     * balanceOf                   0x70a08231
+     * name                        0x06fdde03
+     * owner                       0x8da5cb5b
+     * setChargeLogic              0xa419a333
+     * transferFrom                0x23b872dd
+     * transferOwnership           0xf2fde38b
+     * burn                        0x42966c68
+     * ddcURI                      0x293ec97c
+     *
+     * */
+     
+     charg：0x36351c7c
+     权限合约：addAccountByOperator = 0xe3f00c3a
+             updateAccState=  0xbac7ad52
+          
+     String setURI="0x685e8247";
+     
+     /*---1155
+        String safemint = "0xb55bc617";
+        String safemintBatch = "0x63570355";
+        String setApprovalForAll = "0xa22cb465";
+        String isApprovedForAll = "0xe985e9c5";
+        String safeTransferFrom = "0xf242432a";
+        String safeBatchTransferFrom = "0x2eb2c2d6";
+        String freeze = "0xd7a78db8";
+        String unFreeze = "0xd302b0dc";
+        String burn = "0x9dc29fac";
+        String burnBatch = "0xb2dc5dc3";
+        String balanceOf = "0x00fdd58e";
+        String balanceOfBatch = "0x4e1273f4";
+        String ddcURI = "0x293ec97c";
+     */
+
+
+​	 
+​	 
+	     /**
+	 * 运营方或平台方通过调用该方法进行DDC账户信息的创建，上级角色可进行下级角色账户的操作，如运营方可以为平台方添加账户、平台方可以为终端用户添加账户，但运营方不能直接为终端用户添加账户。
+	 *
+	 * @param sender  The address the transaction is sent from.
+	 * @param account DDC链账户地址
+	 * @param accName DDC账户对应的账户名称
+	 * @param accDID  DDC账户对应的DID信息（普通用户可为空）
+	 * @return 返回交易哈希
+	 * @throws Exception
+	 */
+	public String addAccount(String sender, String account, String accName, String accDID) throws Exception {
+	    return addAccount(sender, account, accName, accDID, RequestOptions.builder(AuthorityService.class).build());
+	}
+	
+	/**
+	 * 运营方或平台方通过调用该方法进行DDC账户信息的创建，上级角色可进行下级角色账户的操作，如运营方可以为平台方添加账户、平台方可以为终端用户添加账户，但运营方不能直接为终端用户添加账户。
+	 *
+	 * @param sender  The address the transaction is sent from
+	 * @param account Added account address
+	 * @param accName Added account name
+	 * @param accDID  did,consumer user nullable
+	 * @param options options
+	 * @return hash
+	 * @throws Exception
+	 */
+	public String addAccount(String sender, String account, String accName, String accDID, RequestOptions options) throws Exception {
+	
+	    // check sender
+	    checkSender(sender);
+	
+	    // check account
+	    checkAccount(account);
+	
+	    // check account name
+	    checkAccountName(accName);
+	
+	    // params
+	    ArrayList<Object> arrayList = new ArrayList<>();
+	    arrayList.add(account);
+	    arrayList.add(accName);
+	    arrayList.add(accDID);
+	
+	    ReqJsonRpcBean reqJsonRpcBean = assembleTransaction(sender, AuthorityFunctions.ADD_ACCOUNT, arrayList, options);
+	    RespJsonRpcBean respJsonRpcBean = RestTemplateUtil.sendPost(reqJsonRpcBean, RespJsonRpcBean.class, options);
+	
+	    resultCheck(respJsonRpcBean);
+	    return (String) respJsonRpcBean.getResult();
+	}

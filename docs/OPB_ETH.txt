@@ -1,0 +1,159 @@
+生产、测试环境普通用户：
+助记词：
+[churn, bracket, three, margin, write, crazy, immense, bag, gather, alone, wood, coach]
+
+地址：
+0xc35047a85807519a945e2968d481a062a799b46b
+
+私钥：
+0x6bf893e78e990356301b8064b61286e9aac2714e0fbc0ef5ae044f3f3716ccbf
+
+公钥：
+9a53aa65aef5d59f1eaebfda1f8d9f8bdc3a1c6597e22fa9b61acc126959fa4fed1a4761a829fa0fbdc4cac2e2f80d52cc6d059804cbe611550873f2f22c12fa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+node1您的新密钥已生成
+
+密钥的公共地址：0x8bf1DEd31B96bC9459434BA47e0AFD06F0272b73
+
+密钥文件路径：node1/keystore/UTC--2021-04-13T07-33-05.995376068Z--8bf1ded31b96bc9459434ba47e0afd06f0272b73
+
+
+
+node2：
+Public address of the key:   0x34569698D48b8f805bE8319B1438d02039fdEd35
+Path of the secret key file: node2/keystore/UTC--2021-04-13T11-06-32.180762975Z--34569698d48b8f805be8319b1438d02039fded35
+
+
+Get the Node1 unique ID:
+geth --networkid 7111 --datadir node1 --syncmode 'full' -verbosity 6 --ipcdisable --port 30311 -unlock '0x8bf1DEd31B96bC9459434BA47e0AFD06F0272b73' --password node1/password.txt --mine console 2>> node1/node1.log
+admin.nodeInfo
+{
+  enode: "enode://1daf686dc18d8bcf9f9f5e7199528880a29841f2d20ac87326e43abf03c5dbe1eab0cd4b192a6fb9f47a71874e82cd7a855c6a8040e2d378e75f0b782540b290@39.96.29.210:30311",
+  enr: "enr:-Je4QNgjzihf8nwK1baPKaNhUvSoBmm7Gzm9e6PtyQCeMV6BT-XecAdZMHlxpK5HM5qS5AnuqY3N_w96AYqmU6YvobsEg2V0aMfGhPgZWreAgmlkgnY0gmlwhCdgHdKJc2VjcDI1NmsxoQIdr2htwY2Lz5-fXnGZUoiAophB8tIKyHMm5Dq_A8Xb4YN0Y3CCdmeDdWRwgnZn",
+  id: "d70e8918efa52b1119aa7da3c0974a29fc602f2fdbde89695e466365fe21e121",
+  ip: "39.96.29.210",
+  listenAddr: "[::]:30311",
+  name: "Geth/v1.9.25-stable-e7872729/linux-amd64/go1.15.6",
+  ports: {
+    discovery: 30311,
+    listener: 30311
+  },
+  protocols: {
+    eth: {
+      config: {
+        byzantiumBlock: 0,
+        chainId: 7111,
+        clique: {...},
+        constantinopleBlock: 0,
+        eip150Block: 0,
+        eip150Hash: "0x0000000000000000000000000000000000000000000000000000000000000000",
+        eip155Block: 0,
+        eip158Block: 0,
+        homesteadBlock: 0,
+        istanbulBlock: 0,
+        petersburgBlock: 0
+      },
+      difficulty: 19,
+      genesis: "0x232de8bfb8a0af0b66e5112d99db3c2349c6e394623d29f4b5ece6cde9959f30",
+      head: "0xb3a506c180a15e7e55cc2a92fdfab981fa2201ec5e941cdaf1413fba7eb3d81d",
+      network: 7111
+    }
+  }
+}
+
+
+Get the Node2 unique ID:
+
+geth --networkid 7111 --datadir node2 --syncmode 'full' -verbosity 6 --ipcdisable --port 30312 --rpc --rpcaddr 127.0.0.1 --rpcport 8547 --rpcapi 'eth,net,web3' --ws --ws.port 8557 --wsaddr 127.0.0.1 --ws.api 'eth,net,web3' console 2>> node2/node2.log
+
+admin.nodeInfo
+{
+  enode: "enode://9764aa57e1a7227724e22b2327ef5c82f4394d2717be0115c53c4929cf68c5c2c5ff8e4dd73a60c404ca51733e3534b5a700c85143dc09a5e890e9fb8768d88c@39.96.29.210:30312",
+  enr: "enr:-Je4QBQ8vb08o3inP729oKHqdxbFs_1rDlyVncIQyjL-OvA4A5rXZ_TFKZaZWBr0HWLHMDRVRZr4as1bHb_Y783gZvACg2V0aMfGhPgZWreAgmlkgnY0gmlwhCdgHdKJc2VjcDI1NmsxoQKXZKpX4acidyTiKyMn71yC9DlNJxe-ARXFPEkpz2jFwoN0Y3CCdmiDdWRwgnZo",
+  id: "494acf6c0012330af07534041b3f5e38779cbc270baedf0849e4c303bbee34fa",
+  ip: "39.96.29.210",
+  listenAddr: "[::]:30312",
+  name: "Geth/v1.9.25-stable-e7872729/linux-amd64/go1.15.6",
+  ports: {
+    discovery: 30312,
+    listener: 30312
+  },
+  protocols: {
+    eth: {
+      config: {
+        byzantiumBlock: 0,
+        chainId: 7111,
+        clique: {...},
+        constantinopleBlock: 0,
+        eip150Block: 0,
+        eip150Hash: "0x0000000000000000000000000000000000000000000000000000000000000000",
+        eip155Block: 0,
+        eip158Block: 0,
+        homesteadBlock: 0,
+        istanbulBlock: 0,
+        petersburgBlock: 0
+      },
+      difficulty: 1,
+      genesis: "0x232de8bfb8a0af0b66e5112d99db3c2349c6e394623d29f4b5ece6cde9959f30",
+      head: "0x232de8bfb8a0af0b66e5112d99db3c2349c6e394623d29f4b5ece6cde9959f30",
+      network: 7111
+    }
+  }
+}
+
+Configure Network Access Control:
+
+[ 
+"enode://1daf686dc18d8bcf9f9f5e7199528880a29841f2d20ac87326e43abf03c5dbe1eab0cd4b192a6fb9f47a71874e82cd7a855c6a8040e2d378e75f0b782540b290@39.96.29.210:30311", 
+"enode://9764aa57e1a7227724e22b2327ef5c82f4394d2717be0115c53c4929cf68c5c2c5ff8e4dd73a60c404ca51733e3534b5a700c85143dc09a5e890e9fb8768d88c@39.96.29.210:30312"
+]
+
+
+
+Start the Node1:
+geth --networkid 7111 --datadir node1 --syncmode 'full' --nodiscover --maxpeers 0 -verbosity 6 --ipcdisable --port 30311 -unlock '0x8bf1DEd31B96bC9459434BA47e0AFD06F0272b73' --password node1/password.txt --mine console 2>> node1/node1.log
+
+
+Start the Node2:
+geth --networkid 7111 --datadir node2 --syncmode 'full' --nodiscover --maxpeers 1 -verbosity 6 --ipcdisable --port 30312 --rpc --rpcaddr 127.0.0.1 --rpcport 8547 --rpcapi 'eth,net,web3' --ws --ws.port 8548 --wsaddr 127.0.0.1 --ws.api 'eth,net,web3' console 2>> node2/node2.log
+
+
+
+
+Linux 上安装 Node.js
+https://www.cnblogs.com/sirdong/p/11447739.html
+
+wget https://nodejs.org/dist/v12.18.1/node-v12.18.1-linux-x64.tar.xz    // 下载
+tar xf node-v12.18.1-linux-x64.tar.xz                                   // 解压
+cd node-v12.18.1-linux-x64                                              // 进入解压目录
+
+export PATH=$PATH:/usr/local/eth/nodeJs/node-v12.18.1-linux-x64/bin
+
+
+Launch the OPE node1:
+geth --networkid 7111 --datadir node1 --syncmode 'full' --nodiscover --maxpeers 0 -verbosity 6 --ipcdisable --port 30311 -unlock '0x8bf1DEd31B96bC9459434BA47e0AFD06F0272b73' --password node1/password.txt --mine console 2>> node1/node1.log
+
+Launch the OPE node2:
+geth --networkid 7111 --datadir node2 --syncmode 'full' --nodiscover --maxpeers 1 -verbosity 6 --ipcdisable --port 30312 --rpc --rpcaddr 127.0.0.1 --rpcport 8541 --rpcapi 'eth,net,web3' --ws --ws.port 8551 --wsaddr 127.0.0.1 --ws.api 'eth,net,web3' console 2>> node2/node2.log
+
+
+node2代理：
+websocket bsn-eth-proxy listening at port:8558
+HTTP bsn-eth-proxy listening at port:8557
+
+
