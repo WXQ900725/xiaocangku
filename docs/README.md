@@ -2,8 +2,10 @@
 
 > laugh every day haha.
 
-<div>
-<img src="https://s2.loli.net/2022/04/29/q2wCnubro91WURj.jpg" style="padding-left:28%;height:180px;" />
+
+
+<div align=center>
+<img src="https://s2.loli.net/2022/04/29/q2wCnubro91WURj.jpg" alt="boy" style="zoom: 33%;" />
 </div>
 
 
