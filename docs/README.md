@@ -1,8 +1,14 @@
 # Hey Boy 
 
-> An awesome project.
+> laugh every day haha.
 
-<img src="https://s2.loli.net/2022/04/29/q2wCnubro91WURj.jpg" alt="1" style="zoom: 25%;" />
+![boy](\_media\boy.jpg)
+
+```
+<div align=center><img src="https://s2.loli.net/2022/04/29/q2wCnubro91WURj.jpg" ><img/></div>
+```
+
+
 
 ### ETH
 
