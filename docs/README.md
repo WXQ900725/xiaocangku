@@ -4,7 +4,7 @@
 
 <img src="https://s2.loli.net/2022/04/29/q2wCnubro91WURj.jpg" alt="1" style="zoom: 25%;" />
 
-### 武汉链
+### ETH
 
 ####  合约批量转账
 
