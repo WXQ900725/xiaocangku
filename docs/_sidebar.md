@@ -11,7 +11,7 @@
   
   * 浏览器
     - [部署文档 ](note\eth\browser\browserDeployDoc.md)
-    - [已部署](note\eth\browser\bBowser.md)
+    - [已部署](note\eth\browser\Bowser.md)
   * 公链
     - [公链配置](note\eth\pubChain\publicChainConfig.md)
   
