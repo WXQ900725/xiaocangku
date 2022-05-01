@@ -10,6 +10,6 @@
 
 <!-- 背景图片 -->
 
- ![](https://github.com/WangXiaoQiang-20/xiaocangku/blob/0f25357bed26c2cfb823ce16ddc560f61c31acda/image/myBoy.jpg) 
+ ![](https://s2.loli.net/2022/05/01/yHrMpsxQitLqwzD.jpg) 
 
 <!-- 背景色 -->
