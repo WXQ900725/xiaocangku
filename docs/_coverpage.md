@@ -10,8 +10,6 @@
 
 <!-- 背景图片 -->
 
- ![](image\myBoy.jng) 
+ ![](https://github.com/WangXiaoQiang-20/xiaocangku/blob/0f25357bed26c2cfb823ce16ddc560f61c31acda/image/myBoy.jpg) 
 
 <!-- 背景色 -->
-
- ![color](#f0f0f0)
