@@ -5,13 +5,3 @@
 - 开始吧...
 
 [点我啊](https://wangxiaoqiang-20.github.io/xiaocangku/#/?id=hey-boy)
-
-
-
-
-
-<!-- 背景图片 -->
-![](_media\myBoy.png)
-
-<!-- 背景色 -->
-![color](#f0f0f0f)
