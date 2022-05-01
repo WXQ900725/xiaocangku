@@ -2,11 +2,11 @@
 
 > laugh every day haha.
 
-![boy](\_media\boy.jpg)
 
-```
-<div align=center><img src="https://s2.loli.net/2022/04/29/q2wCnubro91WURj.jpg" ><img/></div>
-```
+
+<div align=center><img src="/_media/boy.jpg"  width="100%" height="30%"><img/></div>
+
+
 
 
 
