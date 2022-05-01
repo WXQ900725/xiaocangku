@@ -2,7 +2,7 @@
 
 > laugh every day haha.
 
-<div  style="width: auto; height: 50%; align-content: center;" >
+<div>
 <img src="https://s2.loli.net/2022/04/29/q2wCnubro91WURj.jpg" style="padding-left:28%;height:180px;" />
 </div>
 
