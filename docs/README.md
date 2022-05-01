@@ -2,9 +2,11 @@
 
 > laugh every day haha.
 
-<img src="https://s2.loli.net/2022/05/01/381bFYLWAimlCGo.jpg" alt="boy" style="zoom: 33%;" />
 
 
+<div align=center >
+    <img src="https://s2.loli.net/2022/05/01/381bFYLWAimlCGo.jpg" alt="boy" style="zoom: 33%;" />
+</div>
 
 ### ETH
 
