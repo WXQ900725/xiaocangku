@@ -4,13 +4,7 @@
 
 
 
-<div align=center><img src="/_media/boy.jpg"  width="100%" height="30%"><img/></div>
-
-
-
-
-
-### ETH
+<div align=center><img src="https://github.com/WangXiaoQiang-20/xiaocangku/blob/master/docs/_media/boy.jpg"  width="100%" height="30%"><img/></div>
 
 ####  合约批量转账
 
